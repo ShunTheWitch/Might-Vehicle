@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>MightAutocannon</defName>
+		<defName>Tango_MainTurret</defName>
 		<label>tango autocannon</label>
 		<description>A heavy automatic turret mounted on a Tango APC. Its large-caliber shells do heavy damage over significant ranges, but it’s inaccurate and uses up a lot of ammo.</description>
 		
@@ -53,7 +53,7 @@
 		</fireModes>
 
 		<graphicData>
-			<texPath>Things/Vehicles/Tier2/Tier2_Tank_CannonTop/</texPath>
+			<texPath>Things/Vehicles/Tier2/ZTZ99A/AAAAAAAAAAAAAAAAAAAA</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(4, 4)</drawSize>

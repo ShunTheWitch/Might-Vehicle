@@ -22,7 +22,6 @@
 		
 		<size>(4, 10)</size>
 		
-		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Industrial</techLevel>
 		<vehicleType>Land</vehicleType>
@@ -362,7 +361,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>ZTZ99A_MainTurre</turretDef>
+						<turretDef>mightaacannon</turretDef>
 						
 						<renderProperties>
 							<north>(0, 0.55)</north>

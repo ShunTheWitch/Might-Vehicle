@@ -24,7 +24,7 @@
 	</ThingDef>
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>ZTZ99A_MainTurre</defName>
+		<defName>mightaacannon</defName>
 		<label>Anti Air Cannons</label>
 		<description>S</description>
 		
@@ -36,8 +36,6 @@
 		<reloadTimer>4.4</reloadTimer>
 		<warmUpTimer>3.4</warmUpTimer>
 		<magazineCapacity>0</magazineCapacity>
-		<chargePerAmmoCount>5</chargePerAmmoCount>
-		<genericAmmo>true</genericAmmo>
 		
 		<autoSnapTargeting>false</autoSnapTargeting>
 		<rotationSpeed>1.2</rotationSpeed>
