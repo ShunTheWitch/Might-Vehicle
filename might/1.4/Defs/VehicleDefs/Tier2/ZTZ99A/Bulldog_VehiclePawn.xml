@@ -359,9 +359,6 @@
         <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
         <minIdleAlpha>0.2</minIdleAlpha>
       </li>
-        <drawWithNoSelection>True</drawWithNoSelection>
-        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
-        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
