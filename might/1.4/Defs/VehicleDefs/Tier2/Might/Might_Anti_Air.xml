@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>mightantiair</defName>
+		<label>high-explosive shell</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		
+		<projectile>
+			<damageDef>Thump</damageDef>
+			<damageAmountBase>4</damageAmountBase>
+			<speed>360</speed>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+	</ThingDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>mightaacannon</defName>
+		<label>Anti Air Cannons</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Shot_Autocannon</shotSound>
+		
+		<projectile>mightantiair</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>60</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>32.9</maxRange>
+		
+		<recoil>
+			<distanceTotal>0.15</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.1</speedMultiplierPostRecoil>
+		</recoil>
+		
+		<attachProjectileFlag>VVE_Tank</attachProjectileFlag>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>5</ticksBetweenShots>
+				<ticksBetweenBursts>5</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>5</shotsPerBurst>
+				<ticksBetweenShots>5</ticksBetweenShots>
+				<ticksBetweenBursts>25</ticksBetweenBursts>
+				<spreadRadius>1</spreadRadius>
+				<label>Burst</label>
+				<texPath>UI/Gizmos/FireRate_Burst</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Things/Vehicles/Tier2/ZTZ99A/Tier2_Tank_CannonTop</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(1.75, 1.75)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>

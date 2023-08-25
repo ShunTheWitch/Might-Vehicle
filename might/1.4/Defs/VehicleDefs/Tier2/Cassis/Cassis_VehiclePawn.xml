@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>Cassis</defName>
+		<label>Cassis</label>
+		<description>A general-purpose boat, the Trawler is an effective long distance transportation across open waters. Performs rather poorly on rivers and has to travel slowly during the winter season.\n\nSimilar to other tier 2 vehicles, this has double fuel efficiency on the world map which makes them more efficient than tier 1 vehicles. They are also less visible due to improved manufacturing.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Tier2/Tier2_Boat/Tier2_Boat</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(3, 6)</drawSize>
+			<color>(75, 75, 75)</color>
+		</graphicData>
+		
+		<fillPercent>0.7</fillPercent>
+		
+		<nameable>false</nameable>
+		<buildDef>Cassis_Blueprint</buildDef>
+		
+		<size>(2, 5)</size>
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Industrial</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.44</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.0</ArmorRating_Heat>
+			<MarketValue>1565</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>80</Mass>
+			<MoveSpeed>4.6</MoveSpeed>
+			<CargoCapacity>750</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<key>(IgnitionOn, IgnitionOff)</key>
+				<value>VVE_VehicleEngineBoat</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent Inherit = "False">
+			<li>
+				<key>PawnEntered</key>
+				<value>VVE_VehicleEnter</value>
+			</li>
+			<li>
+				<key>PawnExited</key>
+				<value>VVE_VehicleEnter</value>
+			</li>
+			<li>
+				<key>IgnitionOn</key>
+				<value>VVE_VehicleStart</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>VVE_VehicleStart</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>3.25</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>true</fishing>
+			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+				</li>
+				<li>
+					<key>passenger</key>
+					<label>Passenger</label>
+					<slots>1</slots>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>Engine</key>
+				<label>Engine</label>
+				<health>80</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				<hitbox>
+					<side>Back</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>LeftSidePanel</key>
+				<label>Left Side Panel</label>
+				<health>160</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Left</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>RightSidePanel</key>
+				<label>Right Side Panel</label>
+				<health>160</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Right</side>
+				</hitbox>
+			</li>
+		</components>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>mightaacannon</turretDef>
+						
+						<renderProperties>
+							<north>(0, 0.55)</north>
+							<south>(0, -3)</south>
+							<east>(0.125, 0.625)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Main Turret</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>mainTurret</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

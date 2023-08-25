@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVN_Mightboomer_blueprint</defName>
+		<label>Might</label>
+		<description>A main battle tank with 125mm cannon.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Gunner x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
+		<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Tier2/ZTZ99A/Tier2_Tank</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5, 11)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(4, 10)</size>
+		
+		<researchPrerequisites>
+			<li>VVE_CombatVehicles</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<Steel>440</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>CVN_Mightboomer</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>
